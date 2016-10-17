@@ -1,0 +1,24 @@
+@model IEnumerable<bdotnet_mvc_demo.Models.Session>
+	<h2>@ViewData["Message"]</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+					@Html.DisplayNameFor(model=>model.Time)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model=>model.Title)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model=>model.Speaker)
+				</th>
+			</tr>
+		</thead>
+		@foreach (var item in Model) {
+		<tr>
+			<td>@Html.DisplayFor(modelItem => item.Time) </td>
+			<td>@Html.DisplayFor(modelItem => item.Title) </td>
+			<td>@Html.DisplayFor(modelItem => item.Speaker) </td>
+		</tr>
+		}
+	</table>

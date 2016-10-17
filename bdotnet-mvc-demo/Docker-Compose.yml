@@ -1,0 +1,13 @@
+version : '2'
+
+services:
+  bdotnetmvcapp:
+    image: wannabeegeek/mvcapp-demo:v1
+    ports:
+      - 5000:5000
+    depends_on:
+      - bdotnetwebapi
+  bdotnetwebapi:
+    image: wannabeegeek/webapi-demo:v1
+    ports:
+      - 8000
