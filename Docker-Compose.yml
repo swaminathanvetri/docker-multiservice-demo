@@ -2,14 +2,14 @@ version : '2'
 
 services:
   dotnetblrmvcapp:
-    #image: wannabeegeek/mvcapp-demo:v1
-    build:.
+    build:
+      context: ./bdotnet-mvc-demo
     ports:
       - 5000:5000
     depends_on:
       - dotnetblrwebapi
   dotnetblrwebapi:
-    #image: wannabeegeek/webapi-demo:v1
-    build:../bdotnet-webapi-demo
+    build:
+      context: ./bdotnet-webapi-demo
     ports:
       - 8000

@@ -16,7 +16,7 @@
 
 # CMD ["dotnet", "run", "--server.urls", "http://*:5000"]
 
-FROM microsoft/aspnetcore:latest
+FROM microsoft/aspnetcore:1.0.1
 WORKDIR /app
 COPY /app /app
 ENV ASPNETCORE_URLS http://*:5000

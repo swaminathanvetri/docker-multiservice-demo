@@ -37,7 +37,8 @@ namespace bdotnet_mvc_demo.Controllers
 
         public async Task<IActionResult> Session()
         {
-            var response = await client.GetStringAsync("http://bdotnetwebapi:8000/api/sessions");
+            //var response = await client.GetStringAsync("http://localhost:5000/api/sessions");
+            var response = await client.GetStringAsync("http://dotnetblrwebapi:8000/api/sessions");
             var sessions = JsonConvert.DeserializeObject<List<Session>>(response);
             ViewData["Message"] = "Sessions";
             return View(sessions);
